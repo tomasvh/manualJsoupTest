@@ -12,7 +12,7 @@ public class ManualTesting {
             Scanner scan = new Scanner(System.in);
             SitePrinter printer = new SitePrinter();
             while (!url.equals("x")){
-                System.out.println("Please input a URL (format example: www.whatever.com)");
+                System.out.println("Please input a URL (format example: www.whatever.com) or x to exit");
                 url = scan.nextLine();
                 if (!url.equals("x")) {
                     String str = "https://" + url;
