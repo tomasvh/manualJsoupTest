@@ -1,8 +1,5 @@
 import model.Site;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 import view.SitePrinter;
-
 import java.util.Scanner;
 
 public class ManualTesting {
