@@ -16,9 +16,7 @@ public class ManualTesting {
                 url = scan.nextLine();
                 if (!url.equals("x")) {
                     String str = "https://" + url;
-                    Document doc = Jsoup.connect(str).get();
-                    Site site = new Site(doc, doc.title(), doc.location(), doc.getElementsByTag("div").size(),
-                            doc.getElementsByTag("a").size(), doc.getElementsByTag("li").size());
+                    Site site = new Site(str);
                     System.out.println(printer.printSite(site));
                 } else {
                     System.out.println("Exiting");

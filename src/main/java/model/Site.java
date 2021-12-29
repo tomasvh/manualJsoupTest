@@ -1,6 +1,9 @@
 package model;
 
+import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+
+import java.io.IOException;
 
 public class Site {
     private Document doc = null;
@@ -14,13 +17,20 @@ public class Site {
 
     }
 
-    public Site (Document doc, String title, String location, int divNumber, int linkNumber, int listNumber) {
-        this.doc = doc;
-        this.title = title;
-        this.location = location;
-        this.divNumber = divNumber;
-        this.linkNumber = linkNumber;
-        this.listNumber = listNumber;
+    public Site (String str) {
+
+        try {
+            this.doc = Jsoup.connect(str).get();
+            this.title = doc.title();
+            this.location = doc.location();
+            this.divNumber = doc.getElementsByTag("div").size();
+            this.linkNumber = doc.getElementsByTag("a").size();
+            this.listNumber = doc.getElementsByTag("li").size();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
     }
 
     public String getTitle() {
