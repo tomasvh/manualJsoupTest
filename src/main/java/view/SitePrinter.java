@@ -12,7 +12,7 @@ public class SitePrinter {
     }
     /**
      * Method for preparing a site object for printing using Site class getters
-     * @param site String
+     * @param site Site
      * @return String
      * */
     public String printSite (Site site) {
