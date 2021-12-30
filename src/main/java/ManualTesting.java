@@ -2,6 +2,10 @@ import model.Site;
 import view.SitePrinter;
 import java.util.Scanner;
 
+/**
+ * Main application start class
+ * @author Tomas Marx-Raacz von Hidvég
+ * */
 public class ManualTesting {
     public static void main(String []args) {
         try {

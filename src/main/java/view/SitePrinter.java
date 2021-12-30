@@ -2,10 +2,19 @@ package view;
 
 import model.Site;
 
+/**
+ * Class for preparing site for printing
+ * @author Tomas Marx Raacz von Hidveg
+ * */
 public class SitePrinter {
     public SitePrinter () {
 
     }
+    /**
+     * Method for preparing a site object for printing using Site class getters
+     * @param site String
+     * @return String
+     * */
     public String printSite (Site site) {
         StringBuilder strb = new StringBuilder();
         strb.append("title: ").append(site.getTitle()).append("\n");

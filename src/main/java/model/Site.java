@@ -6,6 +6,10 @@ import org.jsoup.nodes.Document;
 import java.io.IOException;
 import java.util.Objects;
 
+/**
+ * Main model class for the tests.
+ * @author Tomas Marx-Raacz von Hidvég.
+ * */
 public class Site {
     private Document doc = null;
     private String title = "";
@@ -16,10 +20,18 @@ public class Site {
     private String firstDivContent = "";
     private String firstLink = "";
 
+    /**
+     * Default constructor
+     * */
     public Site () {
 
     }
 
+    /**
+     * Constructor with parameter.
+     * Populates the Site class object by using Jsoup methods.
+     * @param str String.
+     * */
     public Site (String str) {
 
         try {
@@ -37,6 +49,8 @@ public class Site {
 
 
     }
+
+    /* Generic generated Getters and Setters section */
 
     public String getTitle() {
         return title;
