@@ -16,15 +16,13 @@ public class SitePrinter {
      * @return String
      * */
     public String printSite (Site site) {
-        StringBuilder strb = new StringBuilder();
-        strb.append("title: ").append(site.getTitle()).append("\n");
-        strb.append("location: ").append(site.getLocation()).append("\n");
-        strb.append("number of div tags: ").append(site.getDivNumber()).append("\n");
-        strb.append("number of a tags: ").append(site.getLinkNumber()).append("\n");
-        strb.append("number of li tags: ").append(site.getListNumber()).append("\n");
-        strb.append("first div content: ").append(site.getFirstDivContent()).append("\n");
-        strb.append("first link: ").append(site.getFirstLink()).append("\n");
-        return strb.toString();
+        return "title: " + site.getTitle() + "\n" +
+                "location: " + site.getLocation() + "\n" +
+                "number of div tags: " + site.getDivNumber() + "\n" +
+                "number of a tags: " + site.getLinkNumber() + "\n" +
+                "number of li tags: " + site.getListNumber() + "\n" +
+                "first div content: " + site.getFirstDivContent() + "\n" +
+                "first link: " + site.getFirstLink() + "\n";
 
     }
 }
